@@ -8,7 +8,7 @@
       let
         pkgs = import nixpkgs { inherit system; };
         name = "batdistrack";
-        deps = with pkgs; [ bc ];
+        deps = with pkgs; [ bc coreutils-full ];
         script = (pkgs.writeTextFile {
           name = name;
           text = (builtins.readFile ./batdistrack);
